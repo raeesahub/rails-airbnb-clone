@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2021_05_28_153758) do
   enable_extension "plpgsql"
 
   create_table "flats", force: :cascade do |t|
+    t.string "name"
     t.string "address"
     t.integer "price"
     t.bigint "user_id", null: false
