@@ -1,0 +1,15 @@
+<h1>My flats</h1>
+
+<% @flats.each do |flat| %>
+<li><%= flat.name %> </li>
+<% end %>
+
+<h1>My bookings</h1>
+
+<% @bookings.each do |booking| %>
+  <li>
+    <%= booking.flat.name %>
+    <%= booking.start_date %>
+    <%= booking.end_date %>
+  </li>
+<% end %>

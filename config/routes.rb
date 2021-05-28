@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'bookings/index'
-  get 'bookings/new'
-  get 'bookings/create'
+  get 'dashboard', to: 'users#show', as: 'dashboard'
   devise_for :users
   root to: 'pages#home'
 
