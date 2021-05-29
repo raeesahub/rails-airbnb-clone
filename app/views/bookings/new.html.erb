@@ -1,7 +1,10 @@
-<h1>Add a new booking</h1>
+<div class="container mt-5">
+  <h1 class="text-center">Add a new booking</h1>
 
-<%= simple_form_for [@flat, @booking] do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.submit %>
-<% end %>
+  <%= simple_form_for [@flat, @booking] do |f| %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.submit %>
+  <% end %>
+</div>
+
