@@ -1,12 +1,10 @@
-<!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    <%= @flats.each do |flat| %>
       <% flat.photos.each do |photo| %>
         <div class="carousel-item <%= " active" if photo == flat.photos.first %>">
           <%= cl_image_tag photo.key, class: "carousel-image" %>
         </div>
       <% end %>
-    <% end %>
   </div>
 </div>
 
@@ -18,4 +16,4 @@
   <span class="carousel-control-next-icon" aria-hidden="true"></span>
   <span class="sr-only">Next</span>
 </a>
- -->
+
