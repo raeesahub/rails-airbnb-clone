@@ -1,7 +1,19 @@
-<h1>All flats</h1>
+<div class="container mt-3">
+  <h1>All flats</h1>
 
-<ul>
-  <% @flats.each do |flat| %>
-  <li><%= link_to flat.name, flat_path(flat)%> </li>
-  <% end %>
-</ul>
+
+    <% @flats.each do |flat| %>
+      <%= link_to flat_path(flat) do %>
+      <hr>
+        <div class="card-flat">
+          <img src="" />
+          <div class="card-flat-infos">
+            <p><%= flat.address %></p>
+            <h2><%= flat.name %> </h2>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
+</div>
+

@@ -1,0 +1,48 @@
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-emphasis: none !important;
+}
+
+.card-flat {
+  height: 200px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: black;
+}
+
+.card-flat > a {
+  color: black;
+}
+
+.card-flat:hover {
+}
+
+.card-flat img {
+  height: 100%;
+  width: 300px;
+  object-fit: cover;
+}
+
+.card-flat h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-flat p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-flat .card-flat-infos {
+  padding: 16px;
+}
