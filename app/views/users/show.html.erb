@@ -1,15 +1,28 @@
-<h1>My flats</h1>
+<div class="container mt-3">
 
-<% @flats.each do |flat| %>
-<li><%= flat.name %> </li>
-<% end %>
-
-<h1>My bookings</h1>
-
-<% @bookings.each do |booking| %>
+  <ul class="list-inline tabs-underlined">
   <li>
-    <%= booking.flat.name %>
-    <%= booking.start_date %>
-    <%= booking.end_date %>
+    <a href="#" class="tab-underlined active">My flats</a>
   </li>
-<% end %>
+  <li>
+    <a href="#" class="tab-underlined">My bookings</a>
+  </li>
+</ul>
+  <h1>My flats</h1>
+
+  <%= render 'shared/flat_card' %>
+
+  <h1>My bookings</h1>
+
+  <% @bookings.each do |booking| %>
+    <li>
+      <%= booking.flat.name %>
+      <%= booking.start_date %>
+      <%= booking.end_date %>
+    </li>
+  <% end %>
+
+</div>
+
+
+

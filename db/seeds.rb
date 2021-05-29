@@ -12,6 +12,7 @@ User.destroy_all
 require "open-uri"
 
 user = User.create!(email:'test@test.com', password: 'secret')
+user2 = User.create!(email:'test2@test.com', password: 'secret')
 
 tokyo = Flat.create!(name: 'Terrace House', address: 'Tokyo', description: 'Sleeps six in the heart of Tokyo', price: '1000', user_id: user.id)
 
@@ -30,4 +31,13 @@ madrid_array = ['https://a0.muscache.com/im/pictures/06d697d0-c257-4834-bb79-39c
 madrid_array.each do |url|
   file = URI.open(url)
   madrid.photos.attach(io: file, filename: 'flat.png', content_type: 'image/png')
+end
+
+mykonos = Flat.create!(name: 'Luxury stay in Mykonos, Greece', address: 'Mykonos', description: 'Capture iconic views of the Aegean Sea from this modern-Cycladic villa etched into the side of Kounoupas Hill in Mykonos.', price: '700', user_id: user2.id)
+
+mykonos_array = ['https://a0.muscache.com/4ea/air/v2/pictures/c6307530-b6f5-4816-be51-9e0ae89e125c.jpg?t=c:w16-h9-go,r:w2000,e:fjpg-c75','https://a0.muscache.com/im/pictures/4b55ccc6-2869-4324-8f3a-3ac99da63ac4.jpg?im_w=1200','https://a0.muscache.com/im/pictures/f5549307-6eb6-4bc2-8af2-b9b950bf768b.jpg?im_w=720','https://a0.muscache.com/im/pictures/7748359e-a567-46de-bc9c-d43b4f871dfc.jpg?im_w=720']
+
+mykonos_array.each do |url|
+  file = URI.open(url)
+  mykonos.photos.attach(io: file, filename: 'flat.png', content_type: 'image/png')
 end

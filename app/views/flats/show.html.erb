@@ -1,4 +1,23 @@
+<div class="container mt-3">
 
-<h1><%= @flat.name %> </h1>
-<p><%= @flat.address %> </p>
-<p><%= @flat.price %> </p>
+  <h1><%= @flat.name %> </h1>
+  <p>
+    <strong><%= @flat.address %></strong> | £<%= @flat.price %> per night
+    <i class="fas fa-star"></i>
+  </p>
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card-carousel">
+        <%= render 'shared/carousel' %>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <h2>Book this flat</h2>
+      <%= simple_form_for [@flat, @booking] do |f| %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%= f.submit class: 'btn btn-pink' %>
+  <% end %>
+    </div>
+  </div>
+</div>

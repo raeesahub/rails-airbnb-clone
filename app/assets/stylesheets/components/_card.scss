@@ -39,10 +39,19 @@ a:hover {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
-  margin-bottom: 0;
+  margin-bottom: 4px;
   margin-top: 8px;
 }
 
 .card-flat .card-flat-infos {
   padding: 16px;
+}
+
+.card-carousel {
+  // width: 70%;
+  // margin: auto;
+}
+
+.card-carousel img {
+  height: 400px;
 }
