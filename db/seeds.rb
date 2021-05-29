@@ -14,14 +14,6 @@ require "open-uri"
 user = User.create!(email:'test@test.com', password: 'secret')
 user2 = User.create!(email:'test2@test.com', password: 'secret')
 
-tokyo = Flat.create!(name: 'Terrace House', address: 'Tokyo', description: 'Sleeps six in the heart of Tokyo', price: '1000', user_id: user.id)
-
-tokyo_array = ['http://www.terrace-house.jp/inthecity/photo/gallery1_1.jpg','http://www.terrace-house.jp/inthecity/photo/gallery1_2.jpg', 'http://www.terrace-house.jp/inthecity/photo/gallery1_3.jpg', 'http://www.terrace-house.jp/inthecity/photo/gallery1_4.jpg', 'http://www.terrace-house.jp/inthecity/photo/gallery1_5.jpg']
-
-tokyo_array.each do |url|
-  file = URI.open(url)
-  tokyo.photos.attach(io: file, filename: 'flat.png', content_type: 'image/png')
-end
 
 madrid = Flat.create!(name: 'Penthouse hideaway', address: 'Madrid', description:'Recline after a long day of exploration in the two-level penthouse roost. White-washed floorboards and exposed beams and plenty of skylights ensure the perfect mix of inspirational and old world charm to the environment.
 ', price: '100', user_id: user.id)
@@ -40,4 +32,13 @@ mykonos_array = ['https://a0.muscache.com/4ea/air/v2/pictures/c6307530-b6f5-4816
 mykonos_array.each do |url|
   file = URI.open(url)
   mykonos.photos.attach(io: file, filename: 'flat.png', content_type: 'image/png')
+end
+
+tokyo = Flat.create!(name: 'Terrace House', address: 'Tokyo', description: 'Sleeps six in the heart of Tokyo', price: '1000', user_id: user.id)
+
+tokyo_array = ['http://www.terrace-house.jp/inthecity/photo/gallery1_1.jpg','http://www.terrace-house.jp/inthecity/photo/gallery1_2.jpg', 'http://www.terrace-house.jp/inthecity/photo/gallery1_3.jpg', 'http://www.terrace-house.jp/inthecity/photo/gallery1_4.jpg', 'http://www.terrace-house.jp/inthecity/photo/gallery1_5.jpg']
+
+tokyo_array.each do |url|
+  file = URI.open(url)
+  tokyo.photos.attach(io: file, filename: 'flat.png', content_type: 'image/png')
 end
