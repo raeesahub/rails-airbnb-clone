@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 2021_05_29_132956) do
   create_table "flats", force: :cascade do |t|
     t.string "name"
     t.string "address"
+    t.string "description"
     t.integer "price"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
