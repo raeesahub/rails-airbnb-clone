@@ -6,10 +6,13 @@
       <%= link_to flat_path(flat) do %>
       <hr>
         <div class="card-flat">
-          <img src="" />
+          <%= render 'shared/carousel' %>
           <div class="card-flat-infos">
             <p><%= flat.address %></p>
             <h2><%= flat.name %></h2>
+            <p><%= flat.description %> </p>
+            <br>
+            <h2>£<%= flat.price %> per night</h2>
           </div>
         </div>
       <% end %>
