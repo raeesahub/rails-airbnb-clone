@@ -16,3 +16,15 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #E51E54;
+    border-color: #E51E54;
+    background-color: red;
+}
+
+input[type="radio"] {
+    color: #E51E54 !important;
+    border-color: #E51E54 !important;
+
+}

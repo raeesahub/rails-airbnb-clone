@@ -11,7 +11,6 @@ class FlatsController < ApplicationController
     @flat = Flat.find(params[:id])
     @booking = Booking.new
     @review = Review.new
-    @reviews = Review.all
   end
 
   def new

@@ -15,7 +15,7 @@ class Flat < ApplicationRecord
   def average_rating
     sum = 0
     reviews.each { |review| sum += review.rating }
-    sum / reviews.length
+    sum / reviews.length if reviews.any?
   end
 
 end
