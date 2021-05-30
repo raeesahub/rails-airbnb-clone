@@ -18,19 +18,34 @@
     <div class="col-sm-4">
       <h2>Book this flat</h2>
       <%= simple_form_for [@flat, @booking] do |f| %>
-      <%= f.input :start_date %>
-      <%= f.input :end_date %>
-      <%= f.submit class: 'btn btn-pink' %>
-  <% end %>
+        <%= f.input :start_date %>
+        <%= f.input :end_date %>
+        <%= f.submit class: 'btn btn-pink' %>
+      <% end %>
     </div>
     <div class="col-sm-8">
       <p class="mt-3"><%= @flat.description %>  </p>
     </div>
     <div class="col-sm-8">
       <h3>Reviews</h3>
+      <% @reviews.each do |review| %>
+        <li class="mb-1">
+          <p>
+          <% review.rating.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+          <%= review.content %>
+          </p>
+        </li>
+      <% end %>
     </div>
     <div class="col-sm-4">
       <h3>Add a review</h3>
+      <%= simple_form_for [@flat, @review] do |f| %>
+        <%= f.input :rating %>
+        <%= f.input :content %>
+        <%= f.submit class: 'btn btn-pink' %>
+<% end %>
     </div>
   </div>
 
