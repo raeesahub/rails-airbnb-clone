@@ -1,10 +1,10 @@
 const initNavLinks = () => {
   const tabs = document.querySelectorAll('.list-inline tabs-underlined')
-    const flats = document.querySelector('.flats')
-    const bookings = document.querySelector('.bookings')
+  const flats = document.querySelector('.flats')
+  const bookings = document.querySelector('.bookings')
 
-    const flatTab = document.querySelector('#tab-flat')
-    const bookingTab = document.querySelector('#tab-booking')
+  const flatTab = document.querySelector('#tab-flat')
+  const bookingTab = document.querySelector('#tab-booking')
 
  if (flatTab) {
    flatTab.addEventListener('click', tab => {
