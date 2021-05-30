@@ -13,8 +13,8 @@ User.destroy_all
 
 require "open-uri"
 
-user = User.create!(email:'test@test.com', password: 'secret')
-user2 = User.create!(email:'test2@test.com', password: 'secret')
+user = User.create!(email:'test@test.com', password: 'secret', username: 'raeesahub')
+user2 = User.create!(email:'test2@test.com', password: 'secret', username: 'ssaunier')
 
 madrid = Flat.create!(name: 'Penthouse hideaway', address: 'Madrid', description:'Recline after a long day of exploration in the two-level penthouse roost. White-washed floorboards and exposed beams and plenty of skylights ensure the perfect mix of inspirational and old world charm.
 ', price: '100', user_id: user.id)
