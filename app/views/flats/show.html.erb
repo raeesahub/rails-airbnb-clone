@@ -3,11 +3,9 @@
   <h1><%= @flat.name %> </h1>
   <p>
     <strong><%= @flat.address %></strong> | £<%= @flat.price %> per night
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-
+    <% @flat.average_rating.times do %>
+      <i class="fas fa-star"></i>
+    <% end %>
   </p>
   <div class="row">
     <div class="col-sm-8">
@@ -42,7 +40,11 @@
     <div class="col-sm-4">
       <h3>Add a review</h3>
       <%= simple_form_for [@flat, @review] do |f| %>
-        <%= f.input :rating %>
+        <%= f.input :rating, collection: 1..5, as: :radio_buttons,             collection_wrapper_tag: 'div',
+            collection_wrapper_class: 'category-wrapper',
+            item_wrapper_class: 'category-item',
+            input_html: {class: 'category-selector'},
+ %>
         <%= f.input :content %>
         <%= f.submit class: 'btn btn-pink' %>
 <% end %>

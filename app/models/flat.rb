@@ -11,4 +11,11 @@ class Flat < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
+
+  def average_rating
+    sum = 0
+    reviews.each { |review| sum += review.rating }
+    sum / reviews.length
+  end
+
 end
