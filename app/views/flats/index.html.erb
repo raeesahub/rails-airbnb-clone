@@ -21,7 +21,7 @@
       <%= form_tag flats_path, class: "form-inline", method: :get do %>
         <%= text_field_tag :query,
           params[:query],
-          class: "form-control w-95",
+          class: "form-control flex-grow-1",
           placeholder: "Find a flat"
         %>
       <%= submit_tag "Search", id: 'btn-search', class: "btn btn-pink" %>
