@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Booking.destroy_all
+Review.destroy_all
 Flat.destroy_all
 User.destroy_all
 
@@ -15,7 +16,7 @@ require "open-uri"
 user = User.create!(email:'test@test.com', password: 'secret')
 user2 = User.create!(email:'test2@test.com', password: 'secret')
 
-madrid = Flat.create!(name: 'Penthouse hideaway', address: 'Madrid', description:'Recline after a long day of exploration in the two-level penthouse roost. White-washed floorboards and exposed beams and plenty of skylights ensure the perfect mix of inspirational and old world charm to the environment.
+madrid = Flat.create!(name: 'Penthouse hideaway', address: 'Madrid', description:'Recline after a long day of exploration in the two-level penthouse roost. White-washed floorboards and exposed beams and plenty of skylights ensure the perfect mix of inspirational and old world charm.
 ', price: '100', user_id: user.id)
 
 madrid_array = ['https://a0.muscache.com/im/pictures/06d697d0-c257-4834-bb79-39c634b84ab8.jpg?im_w=720','https://a0.muscache.com/im/pictures/eba0cc04-26ae-4887-a2ce-fe2d6620d089.jpg?im_w=1200','https://a0.muscache.com/im/pictures/a2ef90d8-4a56-494f-a052-6685910f54cc.jpg?im_w=1200']

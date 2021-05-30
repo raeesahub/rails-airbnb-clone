@@ -20,12 +20,11 @@
             <h2><%= booking.flat.name %></h2>
             <p>From <%= booking.start_date.strftime('%b %d, %Y') %> to <%= booking.end_date.strftime('%b %d, %Y') %> </p>
             <p><strong>Total price: £<%= booking.total_price %></strong></p>
-                        <% if booking.flat.average_rating %>
+            <% if booking.flat.average_rating %>
               <p><% booking.flat.average_rating.times do %>
                 <i class="fas fa-star"></i>
               <% end %></p>
             <% end %>
-
           </div>
         </div>
       <% end %>
