@@ -43,8 +43,7 @@
         <%= f.input :rating, collection: 1..5, as: :radio_buttons,             collection_wrapper_tag: 'div',
             collection_wrapper_class: 'category-wrapper',
             item_wrapper_class: 'category-item',
-            input_html: {class: 'category-selector'},
- %>
+            input_html: {class: 'category-selector'} %>
         <%= f.input :content %>
         <%= f.submit class: 'btn btn-pink' %>
 <% end %>

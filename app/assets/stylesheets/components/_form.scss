@@ -10,3 +10,9 @@
 #btn-search {
   margin-left: 8px;
 }
+
+.category-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
