@@ -1,17 +1,12 @@
 <div class="container mt-3">
 
   <ul class="list-inline tabs-underlined">
-  <li>
-    <a href="#" id="tab-flat" class="tab-underlined active">My flats </a>
-  </li>
-  <li>
-    <a href="#" id="tab-booking" class="tab-underlined">My bookings</a>
-  </li>
-</ul>
+    <li id="tab-flat" class="tab-underlined active">My flats</li>
+    <li id="tab-booking" class="tab-underlined">My booking</li>
+  </ul>
 
   <div class="flats active">
     <%= render 'shared/flat_card' %>
-
   </div>
 
   <div class="bookings">
@@ -22,10 +17,5 @@
         <%= booking.end_date %>
       </li>
     <% end %>
-
   </div>
-
 </div>
-
-
-
