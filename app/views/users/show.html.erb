@@ -2,7 +2,7 @@
 
   <ul class="list-inline tabs-underlined">
     <li id="tab-flat" class="tab-underlined active">My flats</li>
-    <li id="tab-booking" class="tab-underlined">My booking</li>
+    <li id="tab-booking" class="tab-underlined">My bookings</li>
   </ul>
 
   <div class="flats active">
@@ -11,11 +11,18 @@
 
   <div class="bookings">
     <% @bookings.each do |booking| %>
-      <li>
-        <%= booking.flat.name %>
-        <%= booking.start_date %>
-        <%= booking.end_date %>
-      </li>
+      <%= link_to flat_path(booking.flat) do %>
+        <hr>
+        <div class="card-flat">
+          <%= cl_image_tag booking.flat.photos.first.key %>
+          <div class="card-flat-infos">
+            <p><%= booking.flat.address %></p>
+            <h2><%= booking.flat.name %></h2>
+            <p>From <%= booking.start_date.strftime('%b %d, %Y') %> to <%= booking.end_date.strftime('%b %d, %Y') %> </p>
+            <p><strong>Total price: £<%= booking.total_price %></strong></p>
+          </div>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
