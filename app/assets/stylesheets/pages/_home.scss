@@ -2,7 +2,8 @@
 
 .banner-landing {
   display: grid;
-  color: white;
+  color: #1B2329;
+
 }
 
 .banner-landing img {
@@ -10,6 +11,7 @@
   width: 100vw;
   object-fit: cover;
   z-index: -5;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
 }
 
 .banner-landing-text {

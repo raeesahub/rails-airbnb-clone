@@ -1,11 +1,11 @@
 <%= content_for(:navbar_class, "navbar-home") %>
 
 <div class="banner-landing">
-  <img src=<%= @random_image %> alt="">
+  <img id="banner" alt="" src=<%= @random_image %> >
 
   <div class="banner-landing-text">
     <h1>Live anywhere</h1>
     <p>Rent awesome flats</p>
-    <button class="btn btn-pink">Get started</button>
+    <%= link_to 'Get started', flats_path, class: 'btn btn-pink'  %>
   </div>
 </div>

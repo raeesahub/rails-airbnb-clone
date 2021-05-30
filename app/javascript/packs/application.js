@@ -26,6 +26,8 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 import { initNavLinks } from './init_nav_links';
+import { initLanding } from './init_landing';
+
 import { initMapbox } from '../plugins/init_mapbox';
 
 
@@ -34,5 +36,5 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initMapbox();
   initNavLinks();
-
+  initLanding();
 });
