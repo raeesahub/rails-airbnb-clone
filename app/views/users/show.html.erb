@@ -2,25 +2,28 @@
 
   <ul class="list-inline tabs-underlined">
   <li>
-    <a href="#" class="tab-underlined active">My flats</a>
+    <a href="#" id="tab-flat" class="tab-underlined active">My flats </a>
   </li>
   <li>
-    <a href="#" class="tab-underlined">My bookings</a>
+    <a href="#" id="tab-booking" class="tab-underlined">My bookings</a>
   </li>
 </ul>
-  <h1>My flats</h1>
 
-  <%= render 'shared/flat_card' %>
+  <div class="flats active">
+    <%= render 'shared/flat_card' %>
 
-  <h1>My bookings</h1>
+  </div>
 
-  <% @bookings.each do |booking| %>
-    <li>
-      <%= booking.flat.name %>
-      <%= booking.start_date %>
-      <%= booking.end_date %>
-    </li>
-  <% end %>
+  <div class="bookings">
+    <% @bookings.each do |booking| %>
+      <li>
+        <%= booking.flat.name %>
+        <%= booking.start_date %>
+        <%= booking.end_date %>
+      </li>
+    <% end %>
+
+  </div>
 
 </div>
 

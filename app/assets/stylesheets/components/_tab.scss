@@ -2,12 +2,13 @@
   display: flex;
   align-items: center;
   font-size: 36px;
+  margin-bottom: 16px;
 }
 
 .tabs-underlined .tab-underlined {
   color: black;
   padding: 8px;
-  margin: 8px 16px;
+  margin-right: 16px;
   opacity: .4;
   cursor: pointer;
   text-decoration: none;
@@ -16,5 +17,21 @@
 
 .tabs-underlined .tab-underlined.active {
   opacity: 1;
-  border-bottom: 3px solid #555555;
+  // border-bottom: 3px solid #555555;
+}
+
+.bookings {
+  display: none;
+}
+
+.bookings.active {
+  display: contents;
+}
+
+.flats {
+  display: none;
+}
+
+.flats.active {
+  display: contents;
 }
