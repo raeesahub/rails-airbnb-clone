@@ -2,12 +2,12 @@
   <h1 class="text-center">Add a new flat</h1>
 
   <%= simple_form_for(@flat) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :address %>
-  <%= f.input :price %>
-  <%= f.input :description %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.submit class: 'btn btn-pink' %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :price %>
+    <%= f.input :description %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+    <%= f.submit class: 'btn btn-pink' %>
   <% end %>
 </div>
 
