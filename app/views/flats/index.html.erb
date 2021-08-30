@@ -1,21 +1,21 @@
 <div class="container-fluid mt-2">
   <div class="row">
     <div class="col-md-7">
-        <h1>All flats</h1>
-        <% @flats.each do |flat| %>
-          <%= link_to flat_path(flat) do %>
-            <hr>
-            <div class="card-flat">
-              <%= cl_image_tag flat.photos.first.key %>
-              <div class="card-flat-infos">
-                <p><%= flat.address %></p>
-                <h2><%= flat.name %></h2>
-                <p><%= flat.description %> </p>
-                <p><strong>£<%= flat.price %> per night</strong></p>
-              </div>
+      <h1>All flats</h1>
+      <% @flats.each do |flat| %>
+        <%= link_to flat_path(flat) do %>
+          <hr>
+          <div class="card-flat">
+            <%= cl_image_tag flat.photos.first.key %>
+            <div class="card-flat-infos">
+              <p><%= flat.address %></p>
+              <h2><%= flat.name %></h2>
+              <p><%= flat.description %> </p>
+              <p><strong>£<%= flat.price %> per night</strong></p>
             </div>
-          <% end %>
+          </div>
         <% end %>
+      <% end %>
     </div>
     <div class="col-md-5">
       <%= form_tag flats_path, class: "form-inline", method: :get do %>
@@ -24,7 +24,7 @@
           class: "form-control flex-grow-1",
           placeholder: "Find a flat"
         %>
-      <%= submit_tag "Search", id: 'btn-search', class: "btn btn-pink" %>
+        <%= submit_tag "Search", id: 'btn-search', class: "btn btn-pink" %>
       <% end %>
 
     <div id="map"
